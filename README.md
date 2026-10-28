@@ -16,12 +16,6 @@ dan visualisasi Indeks Ketahanan Pangan (IKP).
 ---
 
 ## Overview
-
-Ketahanan pangan merupakan salah satu aspek penting dalam
-pembangunan daerah dan kesejahteraan masyarakat. Pemantauan
-Indeks Ketahanan Pangan (IKP) dapat memberikan gambaran
-mengenai kondisi ketahanan pangan pada tingkat kabupaten/kota.
-
 Proyek ini mengimplementasikan algoritma **Multilayer Perceptron
 (MLP)** untuk mengestimasi nilai IKP menggunakan enam indikator
 sosial ekonomi dan pangan.
