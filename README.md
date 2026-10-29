@@ -1,13 +1,13 @@
 
 <div align="center">
 
-# Prediksi Indeks Ketahanan Pangan
-### Kabupaten/Kota di Provinsi Kalimantan Barat
+# Food Security Index Prediction
+### Districts and Cities in West Kalimantan Province, Indonesia
 
-**Implementasi Multilayer Perceptron Berbasis Data BAPANAS dan BPS**
+**Implementation of Multilayer Perceptron Using BAPANAS and BPS Data**
 
-Aplikasi web berbasis machine learning untuk estimasi, eksplorasi,
-dan visualisasi Indeks Ketahanan Pangan (IKP).
+A machine learning-based web application for estimating, exploring,
+and visualizing the Food Security Index (FSI).
 
 **Python · Flask · Scikit-learn · Tailwind CSS · Chart.js · Leaflet**
 
@@ -16,60 +16,62 @@ dan visualisasi Indeks Ketahanan Pangan (IKP).
 ---
 
 ## Overview
-Proyek ini mengimplementasikan algoritma **Multilayer Perceptron
-(MLP)** untuk mengestimasi nilai IKP menggunakan enam indikator
-sosial ekonomi dan pangan.
 
-Aplikasi dikembangkan menggunakan **Flask** dengan antarmuka
-responsif, visualisasi interaktif, dan integrasi model machine
-learning untuk mendukung eksplorasi hasil penelitian.
+This project implements the **Multilayer Perceptron (MLP)**
+algorithm to estimate the Food Security Index (FSI) using
+six socioeconomic and food-related indicators.
+
+The application is developed using **Flask**, featuring
+a responsive user interface, interactive visualizations,
+and an integrated machine learning model to support
+data exploration and research analysis.
 
 ### Research Information
 
-| Informasi | Keterangan |
+| Information | Description |
 |---|---|
-| Bidang | Machine Learning / Food Security |
-| Wilayah Penelitian | Provinsi Kalimantan Barat |
-| Unit Analisis | 14 Kabupaten/Kota |
-| Periode Data | 2021–2025 |
-| Jumlah Observasi | 70 |
-| Variabel Masukan | 6 Indikator |
-| Variabel Target | Indeks Ketahanan Pangan (IKP) |
-| Algoritma Utama | Multilayer Perceptron |
-| Model Terpilih | MLP Ensemble Log |
-| Sumber Data | BPS dan BAPANAS |
+| Research Field | Machine Learning / Food Security |
+| Study Area | West Kalimantan Province, Indonesia |
+| Unit of Analysis | 14 Districts and Cities |
+| Data Period | 2021–2025 |
+| Total Observations | 70 |
+| Input Variables | 6 Indicators |
+| Target Variable | Food Security Index (FSI / IKP) |
+| Main Algorithm | Multilayer Perceptron (MLP) |
+| Selected MLP Model | MLP Ensemble Log |
+| Data Sources | Statistics Indonesia (BPS) and the National Food Agency (BAPANAS) |
 
 ---
 
 ## Application Features
 
-Aplikasi menyediakan lima halaman utama yang saling terintegrasi.
+The application consists of five integrated main pages.
 
-| Halaman | Fungsionalitas |
+| Page | Functionality |
 |---|---|
-| **Dashboard** | Ringkasan statistik IKP, tren tahunan, dan peta persebaran geografis. |
-| **Dataset** | Eksplorasi data historis, pencarian, filter, pengurutan, serta ekspor data. |
-| **Prediksi IKP** | Estimasi nilai IKP berdasarkan enam indikator menggunakan model MLP. |
-| **Visualisasi** | Grafik perkembangan IKP, perbandingan wilayah, komposisi skor, dan peta interaktif. |
-| **Evaluasi Model** | Perbandingan kinerja MLP, Naïve, dan Linear Regression menggunakan MAE, RMSE, dan R². |
+| **Dashboard** | Displays summary statistics, annual FSI trends, and a geographic distribution map. |
+| **Dataset** | Provides historical data exploration, searching, filtering, sorting, and data export. |
+| **FSI Prediction** | Estimates FSI values using six input indicators and the MLP Ensemble Log model. |
+| **Visualization** | Presents annual FSI trends, regional comparisons, score distributions, and interactive maps. |
+| **Model Evaluation** | Compares MLP, Naïve, and Linear Regression using MAE, RMSE, and R². |
 
 ---
 
 ## Application Preview
 
-Dokumentasi berikut menampilkan antarmuka aplikasi yang
-telah dikembangkan.
+The following sections showcase the user interface
+of the developed web application.
 
 ### 01. Dashboard
 
-Halaman utama menyediakan ringkasan statistik ketahanan pangan,
-grafik perkembangan IKP, dan peta interaktif wilayah
-Kalimantan Barat.
+The main dashboard provides an overview of food security
+conditions, regional statistics, annual FSI trends,
+and an interactive geographic map of West Kalimantan.
 
 <p align="center">
   <img
     src="Dokumentasi/dashboard.png"
-    alt="Dashboard Indeks Ketahanan Pangan"
+    alt="Food Security Index Dashboard"
     width="850"
   >
 </p>
@@ -78,74 +80,76 @@ Kalimantan Barat.
 
 ### 02. Dataset
 
-Halaman Dataset menampilkan data historis indikator sosial
-ekonomi dan pangan pada 14 kabupaten/kota selama
-periode 2021–2025.
+The Dataset page presents historical socioeconomic
+and food-related indicators across 14 districts and cities
+for the period 2021–2025.
 
-Tersedia fasilitas pencarian, filter, pengurutan,
-pagination, dan pengunduhan data.
+It includes searching, filtering, sorting, pagination,
+and data export functionalities.
 
 <p align="center">
   <img
     src="Dokumentasi/dataset.png"
-    alt="Halaman Dataset Ketahanan Pangan"
+    alt="Food Security Dataset Page"
     width="850"
   >
 </p>
 
 ---
 
-### 03. Prediksi IKP
+### 03. FSI Prediction
 
-Halaman Prediksi digunakan untuk mengestimasi nilai IKP
-berdasarkan enam indikator menggunakan model
-**MLP Ensemble Log**.
+The Prediction page estimates Food Security Index values
+based on six socioeconomic and food-related indicators
+using the **MLP Ensemble Log** model.
 
-Sistem menyediakan validasi input, hasil estimasi,
-interpretasi indikatif, dan riwayat prediksi sementara.
+The system provides input validation, estimated FSI values,
+indicative interpretations, and temporary prediction history.
 
 <p align="center">
   <img
     src="Dokumentasi/prediksi.png"
-    alt="Halaman Prediksi IKP"
+    alt="Food Security Index Prediction Page"
     width="850"
   >
 </p>
 
 ---
 
-### 04. Visualisasi
+### 04. Visualization
 
-Halaman Visualisasi menyediakan eksplorasi data menggunakan
-grafik interaktif dan peta geografis.
+The Visualization page enables interactive data exploration
+through statistical charts and geographic maps.
 
-Visualisasi mencakup perkembangan IKP per tahun,
-perbandingan antarwilayah, distribusi kelompok skor,
-serta persebaran IKP kabupaten/kota.
+Visualizations include annual FSI trends, regional comparisons,
+score group distributions, and geographic patterns across
+districts and cities in West Kalimantan.
 
 <p align="center">
   <img
     src="Dokumentasi/visual.png"
-    alt="Visualisasi Indeks Ketahanan Pangan"
+    alt="Food Security Index Visualization Page"
     width="850"
   >
 </p>
 
 ---
 
-### 05. Evaluasi Model
+### 05. Model Evaluation
 
-Halaman Evaluasi menampilkan hasil pengukuran kinerja
-model menggunakan MAE, RMSE, dan R².
+The Model Evaluation page presents model performance
+measurements using Mean Absolute Error (MAE),
+Root Mean Squared Error (RMSE), and
+the Coefficient of Determination (R²).
 
-Pengguna dapat membandingkan hasil model MLP,
-Naïve, dan Linear Regression pada periode
-validasi historis 2022–2023.
+Users can compare the performance of MLP, Naïve,
+and Linear Regression models during the historical
+validation periods of 2022 and 2023.
 
 <p align="center">
   <img
     src="Dokumentasi/evaluasi.png"
-    alt="Evaluasi Kinerja Model"
+    alt="Machine Learning Model Evaluation Page"
     width="850"
   >
 </p>
@@ -154,28 +158,29 @@ validasi historis 2022–2023.
 
 ## Research Methodology
 
-Tahapan penelitian meliputi:
+The research methodology consists of the following stages:
 
-1. Pengumpulan dan integrasi data BPS serta BAPANAS.
-2. Pemeriksaan kualitas dan prapemrosesan dataset.
-3. Pembagian data berdasarkan urutan waktu.
-4. Pengembangan beberapa konfigurasi Multilayer Perceptron.
-5. Penerapan Naïve dan Linear Regression sebagai pembanding.
-6. Evaluasi menggunakan MAE, RMSE, dan R².
-7. Implementasi model dan hasil penelitian pada aplikasi Flask.
+1. Data collection and integration from BPS and BAPANAS.
+2. Data quality assessment and preprocessing.
+3. Chronological splitting of the dataset.
+4. Development and training of several Multilayer Perceptron configurations.
+5. Implementation of Naïve and Linear Regression as comparison methods.
+6. Performance evaluation using MAE, RMSE, and R².
+7. Integration of the trained model and research results into a Flask web application.
 
-Model utama menggunakan pendekatan **ensemble** yang
-menggabungkan lima jaringan MLP. Transformasi logaritmik
-diterapkan pada sejumlah fitur untuk menangani perbedaan
-skala dan distribusi data.
+The selected MLP model uses an **ensemble learning approach**
+that combines predictions from five MLP networks.
+
+Logarithmic transformations are applied to selected input
+features to address differences in scale and data distribution.
 
 ---
 
 ## Model Evaluation
 
-Evaluasi dilakukan menggunakan pendekatan
-**rolling-origin validation** pada periode historis
-2022–2023.
+Model performance was evaluated using a
+**rolling-origin validation** approach over the
+historical periods of 2022 and 2023.
 
 | Model | MAE ↓ | RMSE ↓ | R² ↑ |
 |---|---:|---:|---:|
@@ -183,31 +188,39 @@ Evaluasi dilakukan menggunakan pendekatan
 | Naïve | **2.101** | **2.866** | **0.755** |
 | Linear Regression (6 Features) | 4.648 | 5.579 | 0.123 |
 
-**MLP Ensemble Log** memperoleh kinerja terbaik
-di antara konfigurasi MLP yang diuji.
+**MLP Ensemble Log** achieved the best performance
+among the evaluated MLP configurations.
 
-Sementara itu, metode Naïve menghasilkan kesalahan
-lebih rendah pada validasi historis, tetapi menggunakan
-informasi masukan yang berbeda dari MLP.
+However, the Naïve method achieved lower prediction
+errors during historical validation. This comparison
+should be interpreted carefully because Naïve uses
+the previous year's actual FSI value, while MLP
+uses six indicators from the same year.
 
 ### Research Limitations
 
-Data IKP periode 2021–2023 menggunakan seri historis,
-sedangkan tahun 2024–2025 menggunakan metodologi
-penghitungan 12 indikator.
+FSI values from 2021 to 2023 follow the historical
+index methodology, whereas the 2024–2025 values
+were calculated using a revised 12-indicator methodology.
 
-Perbedaan metodologi tersebut menjadi keterbatasan
-dalam menilai kemampuan generalisasi model pada
-periode berikutnya.
+This methodological change limits the comparability
+of the target values across periods and affects
+the interpretation of temporal generalization performance.
 
-Hasil prediksi aplikasi merupakan estimasi penelitian,
-bukan nilai IKP resmi yang diterbitkan BAPANAS.
+Furthermore, the available validation data is limited,
+and the results should not be interpreted as evidence
+of operational predictive reliability under the
+revised methodology.
+
+Predictions generated by this application are
+**research-based estimates, not official Food Security
+Index values published by BAPANAS**.
 
 ---
 
 ## Technology Stack
 
-| Komponen | Teknologi |
+| Component | Technology |
 |---|---|
 | Backend | Python, Flask |
 | Machine Learning | Scikit-learn, Multilayer Perceptron |
@@ -245,7 +258,7 @@ West Kalimantan, Indonesia
 
 <div align="center">
 
-**Prediksi Indeks Ketahanan Pangan Kalimantan Barat**
+**Food Security Index Prediction — West Kalimantan**
 
 Academic Research Project · 2026
 
