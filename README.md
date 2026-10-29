@@ -2,14 +2,26 @@
 <div align="center">
 
 # Food Security Index Prediction
-### Districts and Cities in West Kalimantan Province, Indonesia
 
-**Implementation of Multilayer Perceptron Using BAPANAS and BPS Data**
+### A Machine Learning Approach to Regional Food Security Assessment
 
-A machine learning-based web application for estimating, exploring,
-and visualizing the Food Security Index (FSI).
+**West Kalimantan, Indonesia · 2021–2025**
 
-**Python · Flask · Scikit-learn · Tailwind CSS · Chart.js · Leaflet**
+A web-based research application for estimating and exploring the
+Food Security Index using Multilayer Perceptron neural networks,
+official regional statistics, and interactive geospatial visualizations.
+
+<br>
+
+**Python** &nbsp;·&nbsp; **Flask** &nbsp;·&nbsp; **Scikit-learn** &nbsp;·&nbsp; **Tailwind CSS** &nbsp;·&nbsp; **Chart.js** &nbsp;·&nbsp; **Leaflet**
+
+<br>
+
+[Overview](#overview) &nbsp;·&nbsp;
+[Application](#application-showcase) &nbsp;·&nbsp;
+[Methodology](#methodology) &nbsp;·&nbsp;
+[Results](#experimental-results) &nbsp;·&nbsp;
+[Technology](#technology-stack)
 
 </div>
 
@@ -17,232 +29,320 @@ and visualizing the Food Security Index (FSI).
 
 ## Overview
 
-This project implements the **Multilayer Perceptron (MLP)**
-algorithm to estimate the Food Security Index (FSI) using
-six socioeconomic and food-related indicators.
+Food security is a fundamental dimension of regional development,
+reflecting the availability, accessibility, and utilization of food
+resources. Understanding its spatial and temporal characteristics
+is essential for evidence-based analysis.
 
-The application is developed using **Flask**, featuring
-a responsive user interface, interactive visualizations,
-and an integrated machine learning model to support
-data exploration and research analysis.
+This project explores the application of **Multilayer Perceptron (MLP)**
+neural networks to estimate the Food Security Index (FSI), locally
+known as *Indeks Ketahanan Pangan* (IKP), across districts and
+municipalities in West Kalimantan Province, Indonesia.
 
-### Research Information
+The research integrates official data from **Statistics Indonesia (BPS)**
+and the **National Food Agency (BAPANAS)** into a machine learning
+workflow, supported by a Flask-based web application for interactive
+exploration and model evaluation.
 
-| Information | Description |
-|---|---|
-| Research Field | Machine Learning / Food Security |
-| Study Area | West Kalimantan Province, Indonesia |
-| Unit of Analysis | 14 Districts and Cities |
-| Data Period | 2021–2025 |
-| Total Observations | 70 |
-| Input Variables | 6 Indicators |
-| Target Variable | Food Security Index (FSI / IKP) |
-| Main Algorithm | Multilayer Perceptron (MLP) |
-| Selected MLP Model | MLP Ensemble Log |
-| Data Sources | Statistics Indonesia (BPS) and the National Food Agency (BAPANAS) |
+### Project at a Glance
 
----
-
-## Application Features
-
-The application consists of five integrated main pages.
-
-| Page | Functionality |
-|---|---|
-| **Dashboard** | Displays summary statistics, annual FSI trends, and a geographic distribution map. |
-| **Dataset** | Provides historical data exploration, searching, filtering, sorting, and data export. |
-| **FSI Prediction** | Estimates FSI values using six input indicators and the MLP Ensemble Log model. |
-| **Visualization** | Presents annual FSI trends, regional comparisons, score distributions, and interactive maps. |
-| **Model Evaluation** | Compares MLP, Naïve, and Linear Regression using MAE, RMSE, and R². |
+| | |
+|:---|:---|
+| **Study Area** | West Kalimantan, Indonesia |
+| **Geographic Coverage** | 14 districts and municipalities |
+| **Observation Period** | 2021–2025 |
+| **Dataset Size** | 70 observations |
+| **Input Features** | 6 socioeconomic and food-related indicators |
+| **Prediction Target** | Food Security Index (FSI / IKP) |
+| **Primary Method** | Multilayer Perceptron |
+| **Selected MLP Configuration** | MLP Ensemble Log |
+| **Validation Strategy** | Rolling-origin historical validation |
+| **Data Providers** | BPS and BAPANAS |
 
 ---
 
-## Application Preview
+## Application Showcase
 
-The following sections showcase the user interface
-of the developed web application.
+The research is supported by a responsive web application designed
+to make regional food security data and model outputs more accessible.
 
-### 01. Dashboard
+The interface is organized into five integrated modules.
 
-The main dashboard provides an overview of food security
-conditions, regional statistics, annual FSI trends,
-and an interactive geographic map of West Kalimantan.
+### 01 / Dashboard
+
+**Regional food security at a glance.**
+
+The dashboard provides an overview of Food Security Index conditions
+across West Kalimantan. It combines regional statistics, historical
+trends, and an interactive geographic map into a single interface.
+
+Key capabilities include regional filtering, year selection,
+summary indicators, and geographic exploration.
 
 <p align="center">
-  <img
-    src="Dokumentasi/dashboard.png"
-    alt="Food Security Index Dashboard"
-    width="850"
-  >
+  <a href="Dokumentasi/dashboard.png">
+    <img
+      src="Dokumentasi/dashboard.png"
+      alt="Dashboard — Regional Food Security Overview"
+      width="100%"
+    >
+  </a>
 </p>
 
----
+<p align="center"><sub>Figure 01 — Regional Food Security Dashboard</sub></p>
 
-### 02. Dataset
+<br>
 
-The Dataset page presents historical socioeconomic
-and food-related indicators across 14 districts and cities
-for the period 2021–2025.
+### 02 / Dataset Explorer
 
-It includes searching, filtering, sorting, pagination,
-and data export functionalities.
+**Explore the data behind the research.**
+
+The dataset explorer presents historical observations and research
+variables in a structured, searchable interface.
+
+Users can examine socioeconomic and food-related indicators,
+filter observations by region and year, sort records,
+and export available data.
 
 <p align="center">
-  <img
-    src="Dokumentasi/dataset.png"
-    alt="Food Security Dataset Page"
-    width="850"
-  >
+  <a href="Dokumentasi/dataset.png">
+    <img
+      src="Dokumentasi/dataset.png"
+      alt="Dataset Explorer — Historical Food Security Data"
+      width="100%"
+    >
+  </a>
 </p>
 
----
+<p align="center"><sub>Figure 02 — Historical Dataset Explorer</sub></p>
 
-### 03. FSI Prediction
+<br>
 
-The Prediction page estimates Food Security Index values
-based on six socioeconomic and food-related indicators
-using the **MLP Ensemble Log** model.
+### 03 / Food Security Estimation
 
-The system provides input validation, estimated FSI values,
-indicative interpretations, and temporary prediction history.
+**From regional indicators to model-based estimates.**
+
+The prediction interface integrates the trained MLP Ensemble Log
+model into a structured input workflow.
+
+Users provide six socioeconomic and food-related indicators
+to generate an estimated Food Security Index value, accompanied
+by an indicative interpretation.
+
+The application includes input validation and temporary
+prediction history.
 
 <p align="center">
-  <img
-    src="Dokumentasi/prediksi.png"
-    alt="Food Security Index Prediction Page"
-    width="850"
-  >
+  <a href="Dokumentasi/prediksi.png">
+    <img
+      src="Dokumentasi/prediksi.png"
+      alt="Prediction Interface — MLP-Based FSI Estimation"
+      width="100%"
+    >
+  </a>
 </p>
 
----
+<p align="center"><sub>Figure 03 — Food Security Index Estimation Interface</sub></p>
 
-### 04. Visualization
+<br>
 
-The Visualization page enables interactive data exploration
-through statistical charts and geographic maps.
+### 04 / Data Visualization
 
-Visualizations include annual FSI trends, regional comparisons,
-score group distributions, and geographic patterns across
-districts and cities in West Kalimantan.
+**Understanding patterns across space and time.**
+
+The visualization module enables interactive analysis
+of regional Food Security Index values through:
+
+- Historical trend analysis
+- Cross-regional comparisons
+- Score distribution visualization
+- Interactive geographic mapping
+
+These visualizations support descriptive exploration
+of differences between districts and municipalities.
 
 <p align="center">
-  <img
-    src="Dokumentasi/visual.png"
-    alt="Food Security Index Visualization Page"
-    width="850"
-  >
+  <a href="Dokumentasi/visual.png">
+    <img
+      src="Dokumentasi/visual.png"
+      alt="Visualization — Regional Trends and Geographic Patterns"
+      width="100%"
+    >
+  </a>
 </p>
 
----
+<p align="center"><sub>Figure 04 — Interactive Data Visualization</sub></p>
 
-### 05. Model Evaluation
+<br>
 
-The Model Evaluation page presents model performance
-measurements using Mean Absolute Error (MAE),
-Root Mean Squared Error (RMSE), and
-the Coefficient of Determination (R²).
+### 05 / Model Evaluation
 
-Users can compare the performance of MLP, Naïve,
-and Linear Regression models during the historical
-validation periods of 2022 and 2023.
+**Transparent assessment of predictive performance.**
+
+The evaluation dashboard presents experimental results
+using three regression metrics:
+
+- Mean Absolute Error (MAE)
+- Root Mean Squared Error (RMSE)
+- Coefficient of Determination (R²)
+
+It supports comparisons between MLP, Naïve, and
+Linear Regression across historical validation periods.
 
 <p align="center">
-  <img
-    src="Dokumentasi/evaluasi.png"
-    alt="Machine Learning Model Evaluation Page"
-    width="850"
-  >
+  <a href="Dokumentasi/evaluasi.png">
+    <img
+      src="Dokumentasi/evaluasi.png"
+      alt="Model Evaluation — Performance Metrics and Comparisons"
+      width="100%"
+    >
+  </a>
 </p>
 
----
-
-## Research Methodology
-
-The research methodology consists of the following stages:
-
-1. Data collection and integration from BPS and BAPANAS.
-2. Data quality assessment and preprocessing.
-3. Chronological splitting of the dataset.
-4. Development and training of several Multilayer Perceptron configurations.
-5. Implementation of Naïve and Linear Regression as comparison methods.
-6. Performance evaluation using MAE, RMSE, and R².
-7. Integration of the trained model and research results into a Flask web application.
-
-The selected MLP model uses an **ensemble learning approach**
-that combines predictions from five MLP networks.
-
-Logarithmic transformations are applied to selected input
-features to address differences in scale and data distribution.
+<p align="center"><sub>Figure 05 — Model Evaluation Dashboard</sub></p>
 
 ---
 
-## Model Evaluation
+## Methodology
 
-Model performance was evaluated using a
-**rolling-origin validation** approach over the
-historical periods of 2022 and 2023.
+### Research Design
+
+The study follows a structured machine learning workflow,
+from data integration to model evaluation and application development.
+
+**Data Collection → Integration → Preprocessing → Model Development → Temporal Validation → Web Implementation**
+
+### Data and Features
+
+The research dataset covers 14 administrative regions
+over five annual observation periods, resulting in
+70 region-year observations.
+
+Six indicators are used as model inputs:
+
+| Feature | Description |
+|:---|:---|
+| X1 | Poverty rate |
+| X2 | Monthly per capita expenditure |
+| X3 | Open unemployment rate |
+| X4 | Population density |
+| X5 | Paddy production |
+| X6 | Prevalence of Undernourishment (PoU) |
+
+The target variable is the **Food Security Index (IKP)**
+published by BAPANAS.
+
+### Model Development
+
+Several MLP configurations were investigated to assess
+the influence of preprocessing and model configuration
+on prediction performance.
+
+The selected **MLP Ensemble Log** approach combines
+five independently initialized MLP networks.
+
+Selected input variables undergo logarithmic
+transformation followed by feature standardization.
+The ensemble prediction is obtained by averaging
+the outputs of the individual models.
+
+### Validation Strategy
+
+To preserve chronological ordering, the study
+employs **rolling-origin validation** for the
+historical 2022 and 2023 evaluation periods.
+
+A Naïve baseline and a six-feature Linear Regression
+model are included for comparative analysis.
+
+---
+
+## Experimental Results
+
+### Historical Validation Performance
+
+The following table summarizes performance during
+the 2022–2023 historical validation periods.
 
 | Model | MAE ↓ | RMSE ↓ | R² ↑ |
-|---|---:|---:|---:|
-| MLP Ensemble Log | 3.229 | 3.714 | 0.609 |
-| Naïve | **2.101** | **2.866** | **0.755** |
+|:---|---:|---:|---:|
+| **MLP Ensemble Log** | 3.229 | 3.714 | 0.609 |
+| Naïve Baseline | **2.101** | **2.866** | **0.755** |
 | Linear Regression (6 Features) | 4.648 | 5.579 | 0.123 |
 
-**MLP Ensemble Log** achieved the best performance
+*Lower MAE and RMSE indicate smaller prediction errors;
+higher R² indicates better explanatory performance.*
+
+### Key Findings
+
+**01 — MLP configuration selection**
+
+MLP Ensemble Log achieved the strongest results
 among the evaluated MLP configurations.
 
-However, the Naïve method achieved lower prediction
-errors during historical validation. This comparison
-should be interpreted carefully because Naïve uses
-the previous year's actual FSI value, while MLP
-uses six indicators from the same year.
+**02 — Baseline comparison**
 
-### Research Limitations
+The Naïve baseline outperformed the selected MLP
+during historical validation. However, the two
+approaches use different information sets:
+Naïve relies on the previous year's observed index,
+whereas MLP estimates the index from six contemporaneous indicators.
 
-FSI values from 2021 to 2023 follow the historical
-index methodology, whereas the 2024–2025 values
-were calculated using a revised 12-indicator methodology.
+**03 — Temporal generalization**
 
-This methodological change limits the comparability
-of the target values across periods and affects
-the interpretation of temporal generalization performance.
+Performance deteriorated when the historical model
+was assessed against the 2024–2025 index values.
+This finding must be interpreted in the context
+of changes in the official index methodology.
 
-Furthermore, the available validation data is limited,
-and the results should not be interpreted as evidence
-of operational predictive reliability under the
-revised methodology.
+### Limitations
 
-Predictions generated by this application are
-**research-based estimates, not official Food Security
-Index values published by BAPANAS**.
+The study has several important limitations.
+
+First, the available dataset contains only 70 annual
+region-level observations, limiting the amount of
+information available for model training and evaluation.
+
+Second, the official Food Security Index methodology
+changed in 2024. The 2021–2023 historical series and
+the 2024–2025 12-indicator series are not directly
+comparable without methodological consideration.
+
+Third, the model is designed to estimate IKP using
+indicators from the **same observation year**.
+It does not perform independent future-year forecasting.
+
+Accordingly, the results should be interpreted as
+research-based estimates rather than operational
+forecasts or official BAPANAS index values.
 
 ---
 
 ## Technology Stack
 
-| Component | Technology |
-|---|---|
-| Backend | Python, Flask |
-| Machine Learning | Scikit-learn, Multilayer Perceptron |
+| Layer | Technologies |
+|:---|:---|
+| Application Framework | Flask, Python |
+| Machine Learning | Scikit-learn, MLPRegressor |
 | Data Processing | Pandas, NumPy |
 | Frontend | HTML, Tailwind CSS, JavaScript |
-| Data Visualization | Chart.js |
-| Geographic Visualization | Leaflet, GeoJSON |
-| Model Serialization | Joblib |
+| Charts | Chart.js |
+| Geospatial Visualization | Leaflet, GeoJSON |
+| Model Persistence | Joblib |
 
 ---
 
-## Source Code Availability
+## Repository Scope
 
-This repository is intended for **public documentation
-and academic project presentation**.
+This repository serves as a **public-facing research and
+software development portfolio**.
 
-The Flask application source code, trained machine
-learning models, and research datasets are not included
-in this public repository.
+It includes application screenshots, project documentation,
+methodological information, and summarized experimental results.
 
-The repository contains application screenshots,
-research information, and a summary of model evaluation.
+The application source code, trained models, and research
+datasets are maintained separately and are not distributed
+through this repository.
 
 ---
 
@@ -250,7 +350,7 @@ research information, and a summary of model evaluation.
 
 **Roni, S.Kom.**
 
-Machine Learning and Web Application Development
+Machine Learning · Applied Data Science · Web Development
 
 West Kalimantan, Indonesia
 
@@ -258,8 +358,10 @@ West Kalimantan, Indonesia
 
 <div align="center">
 
-**Food Security Index Prediction — West Kalimantan**
+<sub>Food Security Index Prediction · West Kalimantan, Indonesia</sub>
 
-Academic Research Project · 2026
+<br>
+
+<sub>Research & Software Development Portfolio — 2026</sub>
 
 </div>
